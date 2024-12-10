@@ -24,4 +24,8 @@ public interface UserMapper extends BaseMapper<User> {
 
     // xml配置方式
     List<User> queryUsersByWrapper(@Param("ew") QueryWrapper<User> wrapper);
+
+
+    @Update("UPDATE user SET balance = balance - #{money} WHERE id = #{id}")
+    void deductMoneyById(@Param("id") Long id, @Param("money") Integer money);
 }
