@@ -10,4 +10,6 @@ import com.charlie.mp.domain.po.User;
  */
 public interface IUserService extends IService<User> {
     void deductBalanceById(Long id, Integer money);
+
+    void deductBalanceById2(Long id, Integer money);
 }
