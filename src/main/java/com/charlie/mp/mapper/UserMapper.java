@@ -9,4 +9,5 @@ import com.charlie.mp.domain.po.User;
  * @Description: UserMapper
  */
 public interface UserMapper extends BaseMapper<User> {
+    User queryById(Long id);
 }

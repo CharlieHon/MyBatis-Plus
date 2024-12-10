@@ -62,4 +62,11 @@ public class UserMapperTest {
     void testDeleteById() {
         userMapper.deleteById(5L);
     }
+
+    // 测试手写sql：queryById
+    @Test
+    void testQueryById() {
+        User user = userMapper.queryById(1L);
+        System.out.println("user=" + user);
+    }
 }
